@@ -16,16 +16,20 @@ select * from people;
 --list out function usage and custom function examples below here:
 
 -- Kevin - 
+--String 
+--takes input of a string and returns the reverse of it
 SELECT name, REVERSE(name) AS Reverse  
 FROM people 
 ORDER BY name;  
+-- takes in string returns it in all upper case
 SELECT name, Upper(name) AS Upper  
 FROM people 
 ORDER BY name;  
-
+-- make a new person ben with current date as bday
 insert into people (name , birthdate)values
-('Test',getdate ())	;
+('Ben',getdate ())	;
 
+--given a date and returns year, month, and day 
 select year((select birthDate from people where id = 1));
 select month((select birthDate from people where id = 1));
 select day((select birthDate from people where id = 1));
