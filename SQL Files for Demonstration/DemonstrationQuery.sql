@@ -21,6 +21,7 @@ select * from people;
 
 -- The cast functions convert all values within the specified column to the specified value type
 -- the avg function averages all values in said column to a specific value.
+-- avg function cannot take in a date/datetime data type, so we must convert to something it can understand
 -- then, the final two casts return the value to it's original data formatting
 SELECT CAST(
 			CAST(
