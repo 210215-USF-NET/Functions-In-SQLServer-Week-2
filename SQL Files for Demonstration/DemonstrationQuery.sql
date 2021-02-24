@@ -15,7 +15,20 @@ select * from people;
 
 --list out function usage and custom function examples below here:
 
--- Kevin - Scalar
+-- Kevin - 
+SELECT name, REVERSE(name) AS Reverse  
+FROM people 
+ORDER BY name;  
+SELECT name, Upper(name) AS Upper  
+FROM people 
+ORDER BY name;  
+
+insert into people (name , birthdate)values
+('Test',getdate ())	;
+
+select year((select birthDate from people where id = 1));
+select month((select birthDate from people where id = 1));
+select day((select birthDate from people where id = 1));
 
 -- Weston - Aggregate
 
