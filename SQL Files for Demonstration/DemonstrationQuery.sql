@@ -1,4 +1,4 @@
---drop table people;
+drop table people;
 
 CREATE TABLE people (
     id int identity primary key,
@@ -65,5 +65,16 @@ FROM people;
 -- Alan - Tabular
 
 -- Frank - Custom
+
+--Create Function in New Query using CREATE FUNCTION
+--i.e. create a table function 
+	--Create function getNames()
+	--returns Table
+	--As
+	--return (Select * from people) 
+
+--call function with Select* from<Function name>
+--Select * from getNames()
+
 
 -- Steve - summary stuff/holistic overview (not sure if Steve is doing a code demo portion lol)
