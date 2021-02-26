@@ -67,25 +67,25 @@ FROM people;
 
 --Create Function in New Query using CREATE FUNCTION
 --i.e. create a table function
-go;
+go
 Create function getNames()
 returns Table
 return 
 	Select *
 	from people
-go;
+go
 
 --call function with Select* from<Function name>
 Select * from getNames();
 
 -- alter function
-go;
+go
 alter function getNames()
 returns Table
 return 
 	Select name
 	from people
-go;
+go
 
 -- call altered function
 Select * from getNames();
