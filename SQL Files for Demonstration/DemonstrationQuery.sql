@@ -63,18 +63,35 @@ FROM people;
 
 
 -- Alan - Tabular
-
 -- Frank - Custom
 
 --Create Function in New Query using CREATE FUNCTION
---i.e. create a table function 
-	--Create function getNames()
-	--returns Table
-	--As
-	--return (Select * from people) 
+--i.e. create a table function
+go;
+Create function getNames()
+returns Table
+return 
+	Select *
+	from people
+go;
 
 --call function with Select* from<Function name>
---Select * from getNames()
+Select * from getNames();
+
+-- alter function
+go;
+alter function getNames()
+returns Table
+return 
+	Select name
+	from people
+go;
+
+-- call altered function
+Select * from getNames();
+
+-- drop function
+drop function getNames;
 
 
 -- Steve - summary stuff/holistic overview (not sure if Steve is doing a code demo portion lol)
